@@ -26,6 +26,7 @@ export class GithubPage implements OnInit {
             case "C#": icon = "devicon-csharp-line"; break;
             case "Python": icon = "devicon-python-plain"; break;
             case "JavaScript": icon = "devicon-javascript-plain"; break;
+            case "TypeScript": icon = "devicon-typescript-plain"; break;
           }
           this.repos.push({
             owner: repo.owner.login,
