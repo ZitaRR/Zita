@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Github</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-grid class="ion-padding">
+      <ion-row>
+        <ion-col size="{{repos.length}}" *ngFor="let repo of repos">
+          <ion-card button="true" (click)="onClick(repo.href)">
+            <ion-card-header>
+              <ion-card-title>
+                <i class="{{repo.languageIcon}}"></i>
+                {{repo.name}}
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              {{repo.description}}
+              <h6 style="font-size: 10px;">Written in {{repo.language}}</h6>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
